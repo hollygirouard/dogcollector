@@ -2,6 +2,9 @@ from django.db import models
 from django.urls import reverse
 from datetime import date
 
+# Import the User
+from django.contrib.auth.models import User
+
 # Define this above the models
 
 MEALS = (
@@ -28,7 +31,9 @@ class Dog(models.Model):
     description = models.TextField(max_length=250)
     age = models.IntegerField()
     toys = models.ManyToManyField(Toy)
-	# new string addition below
+    # Add the foreign key linking to a user instance
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.name
 

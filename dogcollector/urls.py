@@ -21,4 +21,5 @@ urlpatterns = [
     # below will cause dogs/dogs
     # path('about/', include('main_app.urls')),
     # path('dogs/', include('main_app.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

@@ -124,6 +124,11 @@ STATIC_URL = '/static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
+# Add this variable to specify where successful logins should redirect to
+LOGIN_REDIRECT_URL = '/dogs/'
+
+LOGOUT_REDIRECT_URL = '/'
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 environ.Env()

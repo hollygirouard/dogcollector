@@ -15,16 +15,30 @@ main {
 }
 
 h1, h3 {
-  color: #E5FCC2;
+  color: #45ADA8;
+}
+
+a {
+  color: #594F4F;
 }
 
 footer.page-footer {
   padding-top: 0;
   text-align: right;
+  height: 7vh;
+}
+
+.right {
+  font-size: 18px;
+  color: #E5FCC2;
 }
 
 nav, .page-footer {
   background-color: #45ADA8;
+}
+
+.page-footer .right {
+  margin-top: 1em;
 }
 
 .card, .card-panel, p {
@@ -35,7 +49,14 @@ nav, .page-footer {
 
 input, label {
   color: #594F4F;
-  padding-left: 3em;
+  margin-left: 2em;
+  font-size: 16px;
+}
+
+.select-wrapper input.select-dropdown {
+  margin-left: 2em;
+  margin-right: 6em;
+  width: 80%;
 }
 
 table {
@@ -54,6 +75,10 @@ td, th {
   color: #594F4F;
 }
 
+li a {
+  color: #E5FCC2;
+}
+
 .striped {
   background-color: #9DE0AD;
   border-radius: 20px;
@@ -62,6 +87,14 @@ td, th {
 
 .card-title {
   font-weight: bold;
+}
+
+.card-content p {
+  background-color: #45ADA8;
+}
+
+.card .card-content p {
+  margin: 1em;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
@@ -76,5 +109,40 @@ td, th {
   background-color: #E5FCC2;
   color: #594F4F;
   border-radius: 20px;
+  margin-top: 1em;
+}
 
+#id_date {
+  margin-left: 2em;
+  margin-right: 20px;
+}
+
+.add-form {
+  color: #E5FCC2;
+}
+
+p {
+  padding: 1em;
+}
+
+h5 {
+  color: #45ADA8;
+}
+
+
+hr {
+  border-color: #45ADA8;
+}
+
+.add-form tbody {
+  background-color: #45ADA8;
+  border-radius: 20px;
+}
+
+.add-form label {
+  color: #594F4F;
+}
+
+#id_description {
+  border: none;
 }

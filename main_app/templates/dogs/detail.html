@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Dog Details</h1>
+<h1>Doggo Details</h1>
 
 <div class="row">
   <div class="col s6">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{ dog.name }}</span>
-        <p>Breed: {{ dog.breed }}</p>
-        <p>Description: {{ dog.description }}</p>
+        <span class="card-title">🐕 {{ dog.name }}</span>
+        <p><strong>Breed:</strong> {{ dog.breed }}</p>
+        <p><strong>Description:</strong> {{ dog.description }}</p>
         {% if dog.age > 0 %}
-          <p>Age: {{ dog.age }}</p>
+          <p><strong>Age:</strong> {{ dog.age }}</p>
         {% else %}
-          <p>Age: Kitten</p>
+          <p><strong>Age:</strong> Kitten</p>
         {% endif %}
       </div>
       <div class="card-action">
@@ -24,7 +24,7 @@
     {% for photo in dog.photo_set.all %}
         <img class="responsive-img card-panel" src="{{photo.url}}">
     {% empty %}
-        <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+        <div class="card-panel teal-text center-align">📷  No Photos Uploaded 📷</div>
     {% endfor %}
 
     <!-- new code below -->
@@ -43,13 +43,13 @@
     </form>
     <br>
     {% if dog.fed_for_today %}
-      <div class="card-panel teal-text center-align">{{dog.name}} has been fed all meals for today</div>
+      <div class="card-panel teal-text center-align">✅ {{dog.name}} has been fed all meals for today</div>
     {% else %}
-      <div class="card-panel red-text center-align">{{dog.name}} might be hungry</div>
+      <div class="card-panel red-text center-align">🍔 {{dog.name}} might be hungry 🍔!!!</div>
     {% endif %}
     <table class="striped">
       <thead>
-        <tr><th>Date</th><th>Meal</th></tr>
+        <tr><th>📆  Date:</th><th>Meal:</th></tr>
       </thead>
       <tbody>
         {% for feeding in dog.feeding_set.all %}

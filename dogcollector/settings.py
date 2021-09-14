@@ -133,3 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 environ.Env()
 environ.Env.read_env()
+
+import django_on_heroku
+django_on_heroku.settings(locals())

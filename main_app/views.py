@@ -113,21 +113,22 @@ def assoc_toy(request, dog_id, toy_id):
 
 @login_required
 def unassoc_toy(request, dog_id, toy_id):
-  Dog.objects.get(id=dog_id).toys.remove(toy_id)
-  return redirect('detail', dog_id=dog_id)
+    Dog.objects.get(id=dog_id).toys.remove(toy_id)
+    return redirect('detail', dog_id=dog_id)
+
 class ToyList(LoginRequiredMixin, ListView):
-  model = Toy
+    model = Toy
 class ToyDetail(LoginRequiredMixin, DetailView):
-  model = Toy
+    model = Toy
 class ToyCreate(LoginRequiredMixin, CreateView):
-  model = Toy
-  fields = '__all__'
+    model = Toy
+    fields = '__all__'
 class ToyUpdate(LoginRequiredMixin, UpdateView):
-  model = Toy
-  fields = ['name', 'color']
+    model = Toy
+    fields = ['name', 'color']
 class ToyDelete(LoginRequiredMixin, DeleteView):
-  model = Toy
-  success_url = '/toys/'
+    model = Toy
+    success_url = '/toys'
 
 @login_required
 def add_photo(request, dog_id):
